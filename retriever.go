@@ -5,19 +5,15 @@ import (
 	"github.com/anz-bank/sysl/pkg/sysl"
 	"github.com/joshcarp/gop/gop"
 	"google.golang.org/protobuf/encoding/protojson"
-	"regexp"
 )
-
-const import_regex = `(?:#import.*)|(?:import )(?P<import>.*)`
 
 type Retriever struct {
 	primary      gop.Retriever
 	secondary    gop.Retriever
-	import_regex *regexp.Regexp
 }
 
 func New(primary, secondary gop.Retriever) Retriever {
-	return Retriever{primary: primary, secondary: secondary, import_regex: regexp.MustCompile(import_regex)}
+	return Retriever{primary: primary, secondary: secondary}
 }
 
 func (a Retriever) Retrieve(resource string) ([]byte, bool, error) {
