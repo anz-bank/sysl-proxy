@@ -25,7 +25,9 @@ func (a Retriever) Retrieve(resource string) ([]byte, bool, error) {
 	if err == nil {
 		return res, cached, err
 	}
-	m, err = parse.NewParser().Parse(resource, a.secondary)
+	p := parse.NewParser()
+	p.SetVersioned()
+	m, err = p.Parse(resource, a.secondary)
 	res, err = protojson.Marshal(m)
 	if err != nil {
 		return res, false, err
