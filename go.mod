@@ -1,6 +1,6 @@
 module github.com/joshcarp/sysl-proxy
 
-go 1.14
+go 1.13
 
 require (
 	aqwari.net/xml v0.0.0-20200724195937-ae380bb65a55 // indirect
