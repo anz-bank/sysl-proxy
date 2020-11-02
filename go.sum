@@ -81,6 +81,8 @@ github.com/antlr/antlr4 v0.0.0-20200712162734-eb1adaa8a7a6 h1:LHiO9PmM+glloVgvAW
 github.com/antlr/antlr4 v0.0.0-20200712162734-eb1adaa8a7a6/go.mod h1:T7PbCXFs94rrTttyxjbyT5+/1V8T2TYDejxUfHJjw1Y=
 github.com/antlr/antlr4 v0.0.0-20201025162310-ac92c48a09df h1:TlUcfaKZUkgr0ZqStTmZBTl7SucKnCB4KqLUiKuRxVo=
 github.com/antlr/antlr4 v0.0.0-20201025162310-ac92c48a09df/go.mod h1:T7PbCXFs94rrTttyxjbyT5+/1V8T2TYDejxUfHJjw1Y=
+github.com/anz-bank/gop v0.16.0 h1:ICMlrKp0izMLG/8NlUHhzZJdeZ7wL6yXm3KZsOxTED8=
+github.com/anz-bank/gop v0.16.0/go.mod h1:PxHydMP7CTRG4j61J11v0rtWaod6AiIg6tUp1GktRbU=
 github.com/anz-bank/mermaid-go v0.1.1/go.mod h1:vo8d6wJgGhqvyjBNBjbGvg7PtgYL/JS6JqXwfVD+bZk=
 github.com/anz-bank/pkg v0.0.19 h1:/8SHkzp5An89n/TkhPdUhy1Ki0IRaPdqEWgDYehpctw=
 github.com/anz-bank/pkg v0.0.19/go.mod h1:CEkb9wZnUdHMO/ipyuxI/5/5jYwA00ULilMzA2+PTSo=
@@ -301,15 +303,8 @@ github.com/jessevdk/go-flags v1.4.0/go.mod h1:4FA24M0QyGHXBuZZK/XkWh8h0e1EYbRYJS
 github.com/joho/godotenv v1.3.0/go.mod h1:7hK45KPybAkOC6peb+G5yklZfMxEjkZhHbwpqxOKXbg=
 github.com/josharian/intern v1.0.0 h1:vlS4z54oSdjm0bgjRigI+G1HpF+tI+9rE5LLzOg8HmY=
 github.com/josharian/intern v1.0.0/go.mod h1:5DoeVV0s6jJacbCEi61lwdGj/aVlrQvzHFFd8Hwg//Y=
+github.com/joshcarp/gop v0.0.0-20200922043230-a225272c1746 h1:spKLSLegvrmy/T/OBawmIfc20NAHl/Okytk0W9N3iBE=
 github.com/joshcarp/gop v0.0.0-20200922043230-a225272c1746/go.mod h1:NffrC8QpSNI+2Opd/dYUJB06JmycO2yyY4nri7bc1kg=
-github.com/joshcarp/gop v0.4.1-0.20201006004131-742073ac3697 h1:BQH0KBYxk4zedXM9+m9lOoajdwnQjLJGmHayRokaMc4=
-github.com/joshcarp/gop v0.4.1-0.20201006004131-742073ac3697/go.mod h1:ktfUHEyxdCoGFYg3N9jAieSan0kQrNUS0wzEWA593Ic=
-github.com/joshcarp/gop v0.5.0 h1:PrEgzqOocaSeFH8CeHCL4XAj5/jYFfHTRpOLfUKv4Ys=
-github.com/joshcarp/gop v0.5.0/go.mod h1:ktfUHEyxdCoGFYg3N9jAieSan0kQrNUS0wzEWA593Ic=
-github.com/joshcarp/gop v0.6.0 h1:lEqTPdWH0zYqReQ/bdRbN93jH/DdvZNyX5f+1/J/rss=
-github.com/joshcarp/gop v0.6.0/go.mod h1:U8/5q5uxIozFEUvTHU1dZ2mn2C9OWr2PwRMPWWPk5Bw=
-github.com/joshcarp/gop v0.13.0 h1:TGApN4dsBxoyXfZjlNqq9U5C9YaUCgx+FW9hIP50Om4=
-github.com/joshcarp/gop v0.13.0/go.mod h1:U8/5q5uxIozFEUvTHU1dZ2mn2C9OWr2PwRMPWWPk5Bw=
 github.com/json-iterator/go v1.1.6/go.mod h1:+SdeFBvtyEkXs7REEP0seUULqWtbJapLOCVDaaPEHmU=
 github.com/json-iterator/go v1.1.7/go.mod h1:KdQUCv79m/52Kvf8AW2vK1V8akMuk1QjK/uOdHXbAo4=
 github.com/jstemmer/go-junit-report v0.0.0-20190106144839-af01ea7f8024/go.mod h1:6v2b51hI/fHJwM22ozAgKL4VKDeJcHhJFhtBdhmNjmU=

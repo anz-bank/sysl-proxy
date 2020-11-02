@@ -11,14 +11,14 @@ import (
 	"path"
 
 	secretmanager "cloud.google.com/go/secretmanager/apiv1"
-	"github.com/joshcarp/gop"
-	gop3 "github.com/joshcarp/gop/gop"
-	"github.com/joshcarp/gop/gop/cli"
-	"github.com/joshcarp/gop/gop/gop_filesystem"
-	"github.com/joshcarp/gop/gop/gop_gcs"
-	"github.com/joshcarp/gop/gop/modules"
-	"github.com/joshcarp/gop/gop/retriever/retriever_github"
-	"github.com/joshcarp/gop/gop/retriever/retriever_wrapper"
+	"github.com/anz-bank/gop"
+	"github.com/anz-bank/gop/pkg/cli"
+	gop3 "github.com/anz-bank/gop/pkg/gop"
+	"github.com/anz-bank/gop/pkg/goppers/filesystem"
+	"github.com/anz-bank/gop/pkg/goppers/gcs"
+	"github.com/anz-bank/gop/pkg/modules"
+	"github.com/anz-bank/gop/pkg/retrievers/github"
+	"github.com/anz-bank/gop/pkg/retrievers/wrapper"
 	"github.com/spf13/afero"
 	secretmanagerpb "google.golang.org/genproto/googleapis/cloud/secretmanager/v1"
 )
@@ -101,17 +101,17 @@ func NewGopper(cachelocation, cachelocationsysljson, fsType, accept string) (*go
 	r := gop.GopperService{}
 	switch fsType {
 	case "os":
-		r.Gopper = gop_filesystem.New(afero.NewOsFs(), MemoryLoc(accept))
+		r.Gopper = filesystem.New(afero.NewOsFs(), MemoryLoc(accept))
 	case "mem", "memory", "":
-		r.Gopper = gop_filesystem.New(MemoryFs(accept), "/")
+		r.Gopper = filesystem.New(MemoryFs(accept), "/")
 	case "gcs":
 		if accept == pbjsonaccept {
 			cachelocation = cachelocationsysljson
 		}
-		gcs := gop_gcs.New(cachelocation)
+		gcs := gcs.New(cachelocation)
 		r.Gopper = &gcs
 	}
-	gh := retriever_github.New(
+	gh := github.New(
 		cli.TokensFromString(
 			"github.com:"+Secret("GH_TOKEN")))
 	proxyURL, err := url.Parse(Secret("HTTP_PROXY"))
@@ -122,14 +122,14 @@ func NewGopper(cachelocation, cachelocationsysljson, fsType, accept string) (*go
 	switch accept {
 	case pbjsonaccept:
 		r.Retriever =
-			retriever_wrapper.New(
+			wrapper.New(
 				NewProcessor(
 					modules.New(
 						gh,
 						"sysl_modules/sysl_modules.yaml")))
 	default:
 		r.Retriever =
-			retriever_wrapper.New(
+			wrapper.New(
 				modules.New(
 					gh,
 					"sysl_modules/sysl_modules.yaml"))

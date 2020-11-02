@@ -1,8 +1,8 @@
 package sysl_proxy
 
 import (
+	"github.com/anz-bank/gop/pkg/gop"
 	"github.com/anz-bank/sysl/pkg/parse"
-	"github.com/joshcarp/gop/gop"
 	"google.golang.org/protobuf/encoding/protojson"
 )
 

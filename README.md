@@ -9,8 +9,8 @@
 <div align="center">
 
   [![Status](https://img.shields.io/badge/status-active-success.svg)]() 
-  [![GitHub Issues](https://img.shields.io/github/issues/joshcarp/sysl-proxy)](https://github.com/joshcarp/sysl-proxy/issues)
-  [![GitHub Pull Requests](https://img.shields.io/github/issues-pr/joshcarp/sysl-proxy)](https://github.com/joshcarp/sysl-proxy/pulls)
+  [![GitHub Issues](https://img.shields.io/github/issues/anz-bank/sysl-proxy)](https://github.com/anz-bank/sysl-proxy/issues)
+  [![GitHub Pull Requests](https://img.shields.io/github/issues-pr/anz-bank/sysl-proxy)](https://github.com/anz-bank/sysl-proxy/pulls)
   [![License](https://img.shields.io/badge/license-apache2-blue.svg)](/LICENSE)
 
 </div>
@@ -29,7 +29,7 @@
 
 ## 🧐 About <a name = "about"></a>
 Sysl Proxy is a proxy service to supply .sysl and .pb.json specifications to sysl clients.
-It is modelled off go modules, and depends on [gop](https://github.com/joshcarp/gop).
+It is modelled off go modules, and depends on [gop](https://github.com/anz-bank/gop).
 It is designed to be deployed on google cloud functions, using the ServeHTTP function.
 
 ## 🏁 Getting Started <a name = "getting_started"></a>

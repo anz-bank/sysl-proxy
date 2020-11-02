@@ -1,7 +1,7 @@
 package main
 
 import (
-	sysl_proxy "github.com/joshcarp/sysl-proxy"
+	sysl_proxy "github.com/anz-bank/sysl-proxy"
 	"log"
 	"net"
 	"net/http"
